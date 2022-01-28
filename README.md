@@ -17,7 +17,8 @@ docker run --detach -p 127.0.0.1:2222:22 yakshaveinc/docker-ubuntu-sshd
 ```
 
 ```bash
-ssh root@localhost -p 2222
+ssh root@127.0.0.1 -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
+# or ssh root@localhost -p 2222
 # or ssh ubuntu@localhost -p 2222
 ```
 
