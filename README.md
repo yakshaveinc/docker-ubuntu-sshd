@@ -4,19 +4,20 @@
 
 sshd enabled ubuntu docker image
 
-Docker image is available as [auchida/ubuntu-sshd](https://hub.docker.com/r/auchida/ubuntu-sshd/) in Docker Hub.
+Docker image is available as [yakshaveinc/docker-ubuntu-sshd](https://hub.docker.com/r/yakshaveinc/docker-ubuntu-sshd) in Docker Hub.
 
 ## Image tags
 
-- '20.04`, `latest`
-- `16.04`, `xenial`
-- `14.04`, `trusty`
+- `20.04`, `latest`
 
 ## Usage
 
-```console
-$ docker run -d -p 2222:22 auchida/ubuntu-sshd
-$ ssh root@localhost -p 2222 # or ssh ubuntu@localhost -p 2222
+```bash
+docker run --detach -p localhost:2222:22 yakshaveinc/docker-ubuntu-sshd
+```
+
+```bash
+ssh root@localhost -p 2222 # or ssh ubuntu@localhost -p 2222
 ```
 
 ## Installed packages
