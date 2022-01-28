@@ -13,11 +13,12 @@ Docker image is available as [yakshaveinc/docker-ubuntu-sshd](https://hub.docker
 ## Usage
 
 ```bash
-docker run --detach -p localhost:2222:22 yakshaveinc/docker-ubuntu-sshd
+docker run --detach -p 127.0.0.1:2222:22 yakshaveinc/docker-ubuntu-sshd
 ```
 
 ```bash
-ssh root@localhost -p 2222 # or ssh ubuntu@localhost -p 2222
+ssh root@localhost -p 2222
+# or ssh ubuntu@localhost -p 2222
 ```
 
 ## Installed packages
