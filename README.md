@@ -2,9 +2,16 @@
 
 [![License](https://img.shields.io/github/license/uchida/docker-ubuntu-sshd.svg?maxAge=2592000)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
 
-sshd enabled ubuntu docker image
+Ubuntu image with SSH access. Useful for testing deployments, and do local development using same tools (like Ansible) as with any Ubuntu server.
 
-Docker image is available as [yakshaveinc/docker-ubuntu-sshd](https://hub.docker.com/r/yakshaveinc/docker-ubuntu-sshd) in Docker Hub.
+Available from Docker Hub as [yakshaveinc/docker-ubuntu-sshd](https://hub.docker.com/r/yakshaveinc/docker-ubuntu-sshd).
+
+## Login information
+
+|user  |password|
+|------|--------|
+|root  |root    |
+|ubuntu|ubuntu  |
 
 ## Image tags
 
@@ -12,10 +19,12 @@ Docker image is available as [yakshaveinc/docker-ubuntu-sshd](https://hub.docker
 
 ## Usage
 
+Run image and expose it on port 2222 for local access only.
 ```bash
 docker run --detach -p 127.0.0.1:2222:22 yakshaveinc/docker-ubuntu-sshd
 ```
 
+Connect with SSH ignoring non-actual security warning.
 ```bash
 ssh root@127.0.0.1 -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
 # or ssh root@localhost -p 2222
@@ -28,13 +37,6 @@ ssh root@127.0.0.1 -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/de
 - python
 - python-apt
 - sudo
-
-## Login information
-
-|user  |password|
-|------|--------|
-|root  |root    |
-|ubuntu|ubuntu  |
 
 ## License
 
