@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-MAINTAINER Akihiro Uchida <uchida@turbare.net>
+LABEL org.opencontainers.image.authors="Akihiro Uchida <uchida@turbare.net>, Anatoli Babenia <anatoli@rainforce.org>"
 RUN apt-get update\
  && apt-get install -y --no-install-recommends openssh-server sudo python python-apt\
  && apt-get clean
